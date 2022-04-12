@@ -11,7 +11,7 @@ if( isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']))
 }
 else
 {
-    header('WWW-Autheticate: Basic realm = "Restricated Area"');
-    header('HTTP/1.0 401 Unauthorized');
+    header('WWW-Authenticate: Basic realm="My Realm"');
+    header('HTTP/1.1 401 Unauthorized');
     die("Пожалуйст, введите имя пользователя и пароль");
 }
